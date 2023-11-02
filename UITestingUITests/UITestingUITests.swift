@@ -9,6 +9,8 @@ import XCTest
 
 final class UITestingUITests: XCTestCase {
 
+    private var app: XCUIApplication!
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -16,6 +18,9 @@ final class UITestingUITests: XCTestCase {
         continueAfterFailure = false
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launchArguments.append("-logout")
+        app.launch()
     }
 
     override func tearDownWithError() throws {
@@ -23,36 +28,17 @@ final class UITestingUITests: XCTestCase {
     }
 
     func testLogin() throws {
-        let app = XCUIApplication()
-        app.launch()
-
-        let loginTextField = app.textFields[Identifiers.LoginScreen.loginTextField]
-        loginTextField.tap()
-        loginTextField.typeText("test")
-
-        let passwordTextField = app.textFields[Identifiers.LoginScreen.passwordTextField]
-        passwordTextField.tap()
-        passwordTextField.typeText("test")
-
-        app.buttons[Identifiers.LoginScreen.signInButton].tap()
-
-        XCTAssertTrue(app.staticTexts["This is authorized content."].isHittable)
+        LoginScreen(app: app)
+            .type(email: "test")
+            .type(password: "test")
+            .tapSignIn()
+            .verifyMessage()
     }
 
     func testLoginError() throws {
-        let app = XCUIApplication()
-        app.launch()
-
-        let loginTextField = app.textFields["Login"]
-        loginTextField.tap()
-        loginTextField.typeText("test")
-
-        let passwordTextField = app.textFields["Password"]
-        passwordTextField.tap()
-        passwordTextField.typeText("wrong password")
-
-        app.buttons["Sign in"].tap()
-
-        XCTAssertTrue(app.staticTexts["Wrong credentials"].isHittable)
+        LoginScreen(app: app)
+            .type(email: "test")
+            .type(password: "wrong-password")
+            .tapSignInExpectingError()
     }
 }

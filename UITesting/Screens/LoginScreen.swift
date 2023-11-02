@@ -25,6 +25,7 @@ struct LoginScreen: View {
             if let error {
                 Text(error)
                     .foregroundStyle(.red)
+                    .accessibilityIdentifier(Identifiers.LoginScreen.errorLabel)
             }
 
             Button(action: {

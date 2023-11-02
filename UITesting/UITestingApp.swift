@@ -12,6 +12,11 @@ struct UITestingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .task {
+                    if CommandLine.arguments.contains("-logout") {
+                        AppState.shared.set(authorized: false)
+                    }
+                }
         }
     }
 }

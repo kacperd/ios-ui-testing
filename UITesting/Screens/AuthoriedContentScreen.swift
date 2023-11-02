@@ -19,6 +19,7 @@ struct AuthoriedContentScreen: View {
             Button("Logout") {
                 appState.set(authorized: false)
             }
+            .accessibilityIdentifier(Identifiers.AuthorizedContentScreen.logoutButton)    
         }
         .padding()
     }
