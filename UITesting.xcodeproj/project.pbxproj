@@ -15,6 +15,8 @@
 		E7A2C4242AF2545E00F5808C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2C4232AF2545E00F5808C /* LoginScreen.swift */; };
 		E7A2C4272AF2557700F5808C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2C4262AF2557700F5808C /* AppState.swift */; };
 		E7A2C4292AF257B800F5808C /* AuthoriedContentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2C4282AF257B800F5808C /* AuthoriedContentScreen.swift */; };
+		E7A2C42B2AF3C68700F5808C /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2C42A2AF3C68700F5808C /* Identifiers.swift */; };
+		E7A2C42C2AF3C88000F5808C /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2C42A2AF3C68700F5808C /* Identifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		E7A2C4232AF2545E00F5808C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E7A2C4262AF2557700F5808C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E7A2C4282AF257B800F5808C /* AuthoriedContentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthoriedContentScreen.swift; sourceTree = "<group>"; };
+		E7A2C42A2AF3C68700F5808C /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 			children = (
 				E7A2C4232AF2545E00F5808C /* LoginScreen.swift */,
 				E7A2C4282AF257B800F5808C /* AuthoriedContentScreen.swift */,
+				E7A2C42A2AF3C68700F5808C /* Identifiers.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -226,6 +230,7 @@
 				E7A2C3FB2AF2541C00F5808C /* ContentView.swift in Sources */,
 				E7A2C3F92AF2541C00F5808C /* UITestingApp.swift in Sources */,
 				E7A2C4242AF2545E00F5808C /* LoginScreen.swift in Sources */,
+				E7A2C42B2AF3C68700F5808C /* Identifiers.swift in Sources */,
 				E7A2C4272AF2557700F5808C /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A2C42C2AF3C88000F5808C /* Identifiers.swift in Sources */,
 				E7A2C4142AF2541D00F5808C /* UITestingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

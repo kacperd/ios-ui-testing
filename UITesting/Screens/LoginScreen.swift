@@ -17,8 +17,10 @@ struct LoginScreen: View {
     var body: some View {
         VStack {
             TextField("Login", text: $login)
+                .accessibilityIdentifier(Identifiers.LoginScreen.loginTextField)
 
             TextField("Password", text: $password)
+                .accessibilityIdentifier(Identifiers.LoginScreen.passwordTextField)
 
             if let error {
                 Text(error)
@@ -34,6 +36,7 @@ struct LoginScreen: View {
             }, label: {
                 Text("Login")
             })
+            .accessibilityIdentifier(Identifiers.LoginScreen.signInButton)
         }
         .textFieldStyle(RoundedBorderTextFieldStyle())
         .padding()

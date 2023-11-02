@@ -26,15 +26,15 @@ final class UITestingUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        let loginTextField = app.textFields["Login"]
+        let loginTextField = app.textFields[Identifiers.LoginScreen.loginTextField]
         loginTextField.tap()
         loginTextField.typeText("test")
 
-        let passwordTextField = app.textFields["Password"]
+        let passwordTextField = app.textFields[Identifiers.LoginScreen.passwordTextField]
         passwordTextField.tap()
         passwordTextField.typeText("test")
 
-        app.buttons["Sign in"].tap()
+        app.buttons[Identifiers.LoginScreen.signInButton].tap()
 
         XCTAssertTrue(app.staticTexts["This is authorized content."].isHittable)
     }
